@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akvarieskærm Storcenter Nord</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- indsæt link her til eksternt stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- opbyg HTML struktur her -->
+    <section class="scene">
+      <div class="bg">
+        <img src="img/crab.png" id="crab" class="fish1" alt="crab" />
+        <img src="img/nemo.png" id="nemo" class="fish2" alt="nemo fish" />
+        <img
+          src="img/pufferfish.png"
+          id="pufferfish"
+          class="fish3"
+          alt="puffer fish"
+        />
+        <img src="img/shark.png" id="shark" class="fish4" alt="shark" />
+        <img
+          src="img/stingray.png"
+          id="stingray"
+          class="fish5"
+          alt="stingray"
+        />
+        <img src="img/turtle.png" id="turtle" class="fish6" alt="turtle" />
+        <img src="img/seaweed.gif" id="seaweed" class="fish7" alt="seaweed" />
+        <img src="img/dory.png" id="dory" class="fish8" alt="dory fish" />
+      </div>
+      <div class="overlay-text">
+        <h1>HVILKEN FISK VIL DU SPILLE MED?</h1>
+        <p>Klik på en fisk, læs og spil</p>
+      </div>
+    </section>
+    <!-- popup til fisk info -->
+    <div id="fish-popup" class="popup">
+      <!--baggrunds-overlay-->
+      <div class="popupContent">
+        <!--selve popup boksen-->
+        <div class="popupBody"></div>
+        <!--her indsættes tekst via JS-->
+        <a href="game.html" class="spilleknap">SPIL MED MIG!</a>
+        <button class="closeBtn">X</button>
+      </div>
+    </div>
+
+    <!-- indsæt link her til eksternt javascript -->
+    <script src="js/index.js"></script>
+  </body>
+</html>

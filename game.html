@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fish Game</title>
+    <link rel="stylesheet" type="text/css" href="css/game.css" />
+  </head>
+  <body>
+    <audio id="movementSound">
+      <source src="sound/move.wav" type="audio/mpeg" />
+    </audio>
+    <audio id="gameoverSound">
+      <source src="sound/loose.wav" type="audio/mpeg" />
+    </audio>
+    <audio id="winningSound">
+      <source src="sound/win.wav" type="audio/mpeg" />
+    </audio>
+    <div id="game">
+      <div id="dodger" style="bottom: 425px; left: 15px"></div>
+    </div>
+    <a href="index.html"
+      ><img id="homeBTN" src="img/home.png" alt="Home button"
+    /></a>
+    <script type="text/javascript" src="js/game.js"></script>
+  </body>
+</html>
