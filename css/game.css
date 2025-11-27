@@ -1,0 +1,77 @@
+:root {
+  /* Farver */
+  --color-water1: #1d5a77;
+  --color-water2: #44b9f1;
+}
+
+/* Dodger style (For alle fisk) */
+#dodger {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 80px;
+  width: 160px;
+  position: absolute;
+}
+
+#game {
+  /* lag: først billede (øverst), så gradient (bagved) */
+  background-image: url("../img/gamebg.png"),
+    linear-gradient(to bottom right, var(--color-water2), var(--color-water1));
+  background-position: center center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 120vw auto;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* fjerner hvide kanter */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#start {
+  color: white;
+  font-size: 4rem;
+  position: relative;
+  text-decoration: none;
+  top: 4rem;
+}
+
+#homeBTN {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 85px;
+  height: 85px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+/*Styling for confetti overlay */
+.confetti-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 9999;
+  background: transparent;
+}
+.confetti-overlay img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.confetti-overlay.confetti-hide img {
+  opacity: 0;
+  transform: translateY(-8px) scale(1.02);
+}

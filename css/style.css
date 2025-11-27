@@ -1,1 +1,340 @@
+:root {
+  --font-body: "Irish Grover", system-ui;
+  --font-body2: "Lato", sans-serif;
 
+  /* Farver */
+  --color-water1: #1d5a77;
+  --color-water2: #44b9f1;
+
+  /* Billede størrelser (px) */
+  --fish-w: 200px;
+
+  /* Start /exit offset (px) */
+  --off-fish1: 200px;
+  --off-fish2: 200px;
+  --off-fish3: 200px;
+  --off-fish4: 400px;
+  --off-fish5: 400px;
+  --off-fish6: 200px;
+  --off-fish7: 200px;
+  --off-fish8: 200px;
+}
+
+/* ---------------------------------------------------------
+   Global reset
+--------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-body);
+}
+
+/* ---------------------------------------------------------
+   Scene styling
+--------------------------------------------------------- */
+.scene {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom right,
+    var(--color-water2),
+    var(--color-water1)
+  );
+}
+
+/* ---------------------------------------------------------
+  Overlay text style 
+--------------------------------------------------------- */
+.overlay-text {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 7;
+}
+
+/* ---------------------------------------------------------
+  Font for the heading
+--------------------------------------------------------- */
+.overlay-text h1 {
+  font-family: "Irish Grover", cursive;
+  font-size: 2.7rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* ---------------------------------------------------------
+  Font for p
+--------------------------------------------------------- */
+.overlay-text p {
+  font-family: "Lato", sans-serif;
+  font-size: 1.4rem;
+  opacity: 0.9;
+}
+
+/* ---------------------------------------------------------
+   Background styling
+--------------------------------------------------------- */
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 870px;
+  margin: 0;
+  background: url(../img/bg.png);
+  background-size: 120vw auto;
+  background-position: center bottom;
+  z-index: 0;
+}
+
+/* ---------------------------------------------------------
+   Fisk
+   - px for selve billedstørrelsen
+   - vw/vh til placering og ALLE animationsafstande
+--------------------------------------------------------- */
+
+/* Crab: Mathilde */
+.fish1 {
+  position: absolute;
+  bottom: 10vh;
+  width: var(--fish-w);
+  max-width: 10vw;
+  z-index: 4;
+  left: calc(-1 * var(--off-fish1));
+  animation: fish1 12s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes fish1 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish1)));
+  }
+}
+
+/* Nemo: Yulia */
+.fish2 {
+  position: absolute;
+  bottom: 20vh;
+  width: var(--fish-w);
+  max-width: 10vw;
+  z-index: 3;
+  left: calc(-1 * var(--off-fish2));
+  animation: fish2 18s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes fish2 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish2)));
+  }
+}
+
+/* Pufferfish: Mikkeline*/
+.fish3 {
+  position: absolute;
+  bottom: 35vh;
+  width: var(--fish-w);
+  max-width: 10vw;
+  z-index: 1;
+  right: calc(-1 * var(--off-fish3));
+  animation: fish3 25s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes fish3 {
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(-100vw - var(--off-fish3))) rotateY(180deg);
+  }
+}
+
+/* Shark: Cecilie */
+.fish4 {
+  position: absolute;
+  bottom: 60vh;
+  width: calc(var(--fish-w) * 2);
+  max-width: 30vw;
+  z-index: 3;
+  right: calc(-1 * var(--off-fish4));
+  animation: fish4 10s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes fish4 {
+  0% {
+    transform: translateX(0) rotateY(0deg);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(-100vw - var(--off-fish4))) rotateY(0deg);
+  }
+}
+
+/* Stingray: Mathilde */
+.fish5 {
+  position: absolute;
+  bottom: 50vh;
+  width: calc(var(--fish-w) * 2);
+  max-width: 30vw;
+  z-index: 3;
+  left: calc(-1 * var(--off-fish5));
+  animation: fish5 18s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes fish5 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish5)));
+  }
+}
+
+/* Turtle; Cecilie */
+.fish6 {
+  position: absolute;
+  bottom: 75vh;
+  width: var(--fish-w);
+  max-width: max-content;
+  z-index: 3;
+  left: calc(-1 * var(--off-fish6));
+  animation: fish6 25s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes fish6 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish6)));
+  }
+}
+/* Seaweed: Mathilde */
+.fish7 {
+  position: absolute;
+  bottom: 10vh;
+  width: calc(var(--fish-w) * 1.5);
+  max-width: max-content;
+  z-index: 2;
+  left: 48vw; /* fast position indenfor #game */
+  animation: none; /* fjernet animation — står stille */
+  cursor: pointer;
+}
+
+/* Dory: Yulia */
+.fish8 {
+  position: absolute;
+  bottom: 34vh;
+  width: var(--fish-w);
+  max-width: 10vw;
+  z-index: 2;
+  left: calc(-1 * var(--off-fish8)); /* start off-screen left */
+  animation: fish8 22s linear infinite;
+  cursor: pointer;
+  /* remove rotateY for natural facing */
+}
+
+@keyframes fish8 {
+  0% {
+    transform: translateX(0);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(100vw + var(--off-fish8)));
+  }
+}
+
+/* ---------------------------------------------------------
+  Pop-up cards styling
+--------------------------------------------------------- */
+.popup {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35); /* overlay */
+  z-index: 9999;
+  padding: 1.25rem;
+}
+
+/* Gør pop-up teksten Lato */
+.popup,
+.popupContent,
+.popupBody,
+.popup * {
+  font-family: var(--font-body2);
+}
+
+/* Tilten på fisk gøres større */
+.popupBody strong {
+  font-family: var(--font-body);
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.popup.is-visible {
+  display: flex;
+}
+
+.popupContent {
+  background: #54abb8;
+  color: #000;
+  border: 4px solid #0c444c;
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem 1.7rem;
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.spilleknap {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #e01b24;
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  text-decoration: none; /* fjerner den understregede streg */
+}
+
+.closeBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  color: #b6b6b6;
+  background-color: #476288;
+  border: none;
+  cursor: pointer;
+}
