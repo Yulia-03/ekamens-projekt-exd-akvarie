@@ -9,13 +9,13 @@
   </head>
   <body>
     <audio id="movementSound">
-      <source src="sound/move.wav" type="audio/mpeg" />
+      <source src="sound/move.mp3" type="audio/mpeg" />
     </audio>
     <audio id="gameoverSound">
-      <source src="sound/loose.wav" type="audio/mpeg" />
+      <source src="sound/loose.mp3" type="audio/mpeg" />
     </audio>
     <audio id="winningSound">
-      <source src="sound/win.wav" type="audio/mpeg" />
+      <source src="sound/win.mp3" type="audio/mpeg" />
     </audio>
     <div id="game">
       <div id="dodger" style="bottom: 425px; left: 15px"></div>
@@ -24,5 +24,10 @@
       ><img id="homeBTN" src="img/home.png" alt="Home button"
     /></a>
     <script type="text/javascript" src="js/game.js"></script>
+    
+<div id="winScreen" class="hidden">
+  <h1>DU VANDT!</h1>
+  <a href="index.html" id="backButton">TILBAGE TIL AKVARIET</a>
+</div>
   </body>
 </html>

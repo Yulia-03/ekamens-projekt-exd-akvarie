@@ -47,6 +47,7 @@ function moveDodgerRight() {
   } else {
     // Winner
     playWinningSound();
+    showWinScreen();
   }
 }
 
@@ -128,4 +129,10 @@ function showConfettiImage() {
   overlay.appendChild(img);
 
   document.body.appendChild(overlay);
+}
+
+//win screen function
+function showWinScreen() {
+  const screen = document.getElementById("winScreen");
+  screen.classList.remove("hidden");
 }

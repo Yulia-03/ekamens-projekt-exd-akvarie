@@ -14,48 +14,51 @@ const getDory = document.getElementById("dory");
 
 // Opretter et lyd-objekt og tildeler source til den specifikke lydfil i mappen "sound"
 const soundCrab = new Audio();
-soundCrab.src = "sound/krabbe.wav";
+soundCrab.src = "sound/krabbe-new.mp3";
 
 const soundNemo = new Audio();
-soundNemo.src = "sound/nemo.wav";
+soundNemo.src = "sound/nemo-new.mp3";
 
 const soundPuffer = new Audio();
-soundPuffer.src = "sound/pufferfisk.wav";
+soundPuffer.src = "sound/pufferfisk-new.mp3";
 
 const soundShark = new Audio();
-soundShark.src = "sound/hvidhaj.wav";
+soundShark.src = "sound/hvidhaj-new.mp3";
 
 const soundStingray = new Audio();
-soundStingray.src = "sound/rokke.wav";
+soundStingray.src = "sound/rokke-new.mp3";
 
 const soundTurtle = new Audio();
-soundTurtle.src = "sound/skilpadde.wav";
+soundTurtle.src = "sound/skilpadde-new.mp3";
+
+const soundDory = new Audio();
+soundDory.src = "sound/dory.mp3";
 
 //Dataobjekt med information om hver fisk
 const fishInfo = {
   crab: {
     title: "KRABBE",
-    text: "“Hej, jeg er en krabbe—jeg går måske sidelæns, men jeg har retning i livet… vil du spille med mig?”",
+    text: "“Hej, jeg er en krabbe—jeg går måske sidelæns, men jeg har retning i livet! Vil du spille med mig?”",
   },
   nemo: {
     title: "KLOVNFISK",
-    text: "“Hej! Jeg er en klovnfisk, måske du kender mig som Nemo? Jeg farer tit vild, men altid med stil… vil du spille med mig?”",
+    text: "“Hej! Jeg er en klovnfisk, måske du kender mig som Nemo? Jeg farer tit vild, men altid med stil! Vil du spille med mig?”",
   },
   pufferfish: {
     title: "PUFFERFISK",
-    text: "“Hej! Jeg er en lille puffer fisk—jeg puster mig kun op, hvis du driller… vil du spille med mig?”",
+    text: "“Hej! Jeg er en lille puffer fisk—jeg puster mig kun op, hvis du driller! Vil du spille med mig?”",
   },
   shark: {
     title: "HVIDHAJ",
-    text: "“Hej, jeg er en haj—jeg lover kun at bide i snacks, ikke venner… vil du spille med mig?”",
+    text: "“Hej, jeg er en haj—jeg lover kun at bide i snacks, ikke venner! Vil du spille med mig?”",
   },
   stingray: {
     title: "ROKKE",
-    text: "“Hej! Jeg er en rokke—jeg svæver rundt som havets flyvende tæppe… vil du spille med mig?”",
+    text: "“Hej! Jeg er en rokke—jeg svæver rundt som havets flyvende tæppe! Vil du spille med mig?”",
   },
   turtle: {
     title: "SKILPADDE",
-    text: "“Hej! Jeg er en langsom, men supersej skildpadde—jeg når måske frem i morgen… vil du spille med mig?”",
+    text: "“Hej! Jeg er en langsom, men supersej skildpadde—jeg når måske frem i morgen! Vil du spille med mig?”",
   },
   seaweed: {
     title: "TANG",
@@ -63,7 +66,7 @@ const fishInfo = {
   },
   dory: {
     title: "BLÅ TANG",
-    text: "Hej! Jeg er en blå tang, måske du kender mig som Dory? Jeg glemmer alt—men aldrig at have det sjovt… vil du spille med mig?",
+    text: "Hej! Jeg er en blå tang, måske du kender mig som Dory? Jeg glemmer alt—men aldrig at have det sjovt! Vil du spille med mig?",
   },
 };
 
@@ -119,25 +122,28 @@ if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
     }
     switch (id) {
       case "crab":
-        currentFishSound = new Audio("sound/krabbe.wav");
+        currentFishSound = new Audio("sound/krabbe-new.mp3");
         break;
       case "nemo":
-        currentFishSound = new Audio("sound/nemo.wav");
+        currentFishSound = new Audio("sound/nemo-new.mp3");
         break;
       case "pufferfish":
-        currentFishSound = new Audio("sound/pufferfisk.wav");
+        currentFishSound = new Audio("sound/pufferfisk-new.mp3");
         break;
       case "shark":
-        currentFishSound = new Audio("sound/hvidhaj.wav");
+        currentFishSound = new Audio("sound/hvidhaj-new.mp3");
         break;
       case "stingray":
-        currentFishSound = new Audio("sound/rokke.wav");
+        currentFishSound = new Audio("sound/rokke-new.mp3");
         break;
       case "turtle":
-        currentFishSound = new Audio("sound/skilpadde.wav");
+        currentFishSound = new Audio("sound/skilpadde-new.mp3");
         break;
       case "seaweed":
-        currentFishSound = new Audio("sound/tang.wav");
+        currentFishSound = new Audio("sound/tang-new.mp3");
+        break;
+      case "dory":
+        currentFishSound = new Audio("sound/dory.mp3");
         break;
     }
     // Afspil lyd

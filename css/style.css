@@ -338,3 +338,7 @@
   border: none;
   cursor: pointer;
 }
+
+#winScreen.hidden {
+  display: none !important;
+}
