@@ -71,10 +71,14 @@ const fishInfo = {
 };
 
 // Funktion: vis popup med HTML-indhold
-function showFishPopup(html) {
+function showFishPopup(html, fishImageSrc) {
   const popup = document.getElementById("fish-popup");
   if (!popup) return;
   popup.querySelector(".popupBody").innerHTML = html;
+  // Sæt fiskebillede, hvis angivet
+  if (fishImageSrc) {
+    document.getElementById("fish-image").src = fishImageSrc;
+  }
   popup.classList.add("is-visible");
 }
 
@@ -113,8 +117,10 @@ if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
     selectedFishId = id;
     const info = fishInfo[id];
     if (!info) return;
+    // får fiskebilledets kilde
+    const ImageSrc = el.src;
     // Vis popup
-    showFishPopup(`<strong>${info.title}</strong><p>${info.text}</p>`);
+    showFishPopup(`<strong>${info.title}</strong><p>${info.text}</p>`,ImageSrc);
     // Stop evt. tidligere lyd
     if (currentFishSound) {
       currentFishSound.pause();

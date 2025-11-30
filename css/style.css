@@ -277,6 +277,7 @@
   background: rgba(0, 0, 0, 0.35); /* overlay */
   z-index: 9999;
   padding: 1.25rem;
+  text-align: center;
 }
 
 /* Gør pop-up teksten Lato */
@@ -301,6 +302,16 @@
 
 .popup.is-visible {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* får fiskens billede at passer med mellemrumet */
+.fishImg {
+  width: 120px;
+  height: auto;
+  margin: 0.5rem 0 1.5rem 0;
+  object-fit: contain;
 }
 
 .popupContent {
@@ -314,30 +325,75 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   text-align: center;
   line-height: 1.4;
+  /* gør for rektangel at være en cirkel */
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
+/* placering til fiskenes billeder */
+.popupContent .fishImg {
+   width: 100px;
+   margin-bottom: 1rem;
+ }
+
+
+ /* Button */
 .spilleknap {
+  display: inline-block;
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #fff;
-  background-color: #e01b24;
+  color: #ffffff;
+  background-color: #e01b24; 
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 1.5rem; 
   cursor: pointer;
-  text-decoration: none; /* fjerner den understregede streg */
+  text-decoration: none;
+  padding: 0.9rem 2.4rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.5px;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.spilleknap:hover {
+  background-color: #e65a53; 
+  transform: scale(1.04);
 }
 
 .closeBtn {
-  padding: 0.5rem 1rem;
-  border-radius: 3rem;
-  font-size: 1.5rem;
-  color: #b6b6b6;
+  padding: 0.45rem 1rem;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #e2e6f0;
   background-color: #476288;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease;
+  margin-top: 1.2rem;
 }
+
+.closeBtn:hover {
+  transform: scale(1.08);
+}
+
 
 #winScreen.hidden {
   display: none !important;

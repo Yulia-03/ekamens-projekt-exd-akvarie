@@ -21,7 +21,6 @@ const winningSound = document.getElementById("winningSound");
 
 function playWinningSound() {
   winningSound.play();
-  showConfettiImage();
 }
 
 // Left dodger
@@ -115,24 +114,19 @@ function playSoundOnMovement() {
   movementSound.currentTime = 0;
 }
 
-// Vis et fuldt konfetti-billede som overlay
-function showConfettiImage() {
-  if (document.querySelector(".confetti-overlay")) return;
-
-  const overlay = document.createElement("div");
-  overlay.className = "confetti-overlay";
-
-  const img = document.createElement("img");
-  img.src = "img/confetti.png";
-  img.alt = "Confetti";
-
-  overlay.appendChild(img);
-
-  document.body.appendChild(overlay);
+// Start confetti function
+function startConfetti() {
+  confetti({
+    particleCount: 1000,
+    spread: 150,
+    origin: { y: 0 },
+    scalar: 2,
+  });
 }
 
 //win screen function
 function showWinScreen() {
   const screen = document.getElementById("winScreen");
   screen.classList.remove("hidden");
+  startConfetti();
 }
