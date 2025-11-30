@@ -38,31 +38,31 @@ soundDory.src = "sound/dory.mp3";
 const fishInfo = {
   crab: {
     title: "KRABBE",
-    text: "“Hej, jeg er en krabbe—jeg går måske sidelæns, men jeg har retning i livet! Vil du spille med mig?”",
+    text: "Hej, jeg er en krabbe—jeg går måske sidelæns, men jeg har retning i livet! Vil du spille med mig?",
   },
   nemo: {
     title: "KLOVNFISK",
-    text: "“Hej! Jeg er en klovnfisk, måske du kender mig som Nemo? Jeg farer tit vild, men altid med stil! Vil du spille med mig?”",
+    text: "Hej! Jeg er en klovnfisk, måske du kender mig som Nemo? Jeg farer tit vild, men altid med stil! Vil du spille med mig?",
   },
   pufferfish: {
     title: "PUFFERFISK",
-    text: "“Hej! Jeg er en lille puffer fisk—jeg puster mig kun op, hvis du driller! Vil du spille med mig?”",
+    text: "Hej! Jeg er en lille puffer fisk—jeg puster mig kun op, hvis du driller! Vil du spille med mig?",
   },
   shark: {
     title: "HVIDHAJ",
-    text: "“Hej, jeg er en haj—jeg lover kun at bide i snacks, ikke venner! Vil du spille med mig?”",
+    text: "Hej, jeg er en haj—jeg lover kun at bide i snacks, ikke venner! Vil du spille med mig?",
   },
   stingray: {
     title: "ROKKE",
-    text: "“Hej! Jeg er en rokke—jeg svæver rundt som havets flyvende tæppe! Vil du spille med mig?”",
+    text: "Hej! Jeg er en rokke—jeg svæver rundt som havets flyvende tæppe! Vil du spille med mig?",
   },
   turtle: {
     title: "SKILPADDE",
-    text: "“Hej! Jeg er en langsom, men supersej skildpadde—jeg når måske frem i morgen! Vil du spille med mig?”",
+    text: "Hej! Jeg er en langsom, men supersej skildpadde—jeg når måske frem i morgen! Vil du spille med mig?",
   },
   seaweed: {
     title: "TANG",
-    text: "”Hej! Jeg er en tang. Jeg vokser i vandet og mange fisk bor ved mig. Jeg kan vokse hurtigt og jeg kan både være grøn, brun og rød. Mennesker kan spise mig! Måske har du smagt mig i sushi?”",
+    text: "Hej! Jeg er en tang. Jeg vokser i vandet og mange fisk bor ved mig. Jeg kan vokse hurtigt og jeg kan både være grøn, brun og rød. Mennesker kan spise mig! Måske har du smagt mig i sushi?",
   },
   dory: {
     title: "BLÅ TANG",
@@ -117,10 +117,14 @@ if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
     selectedFishId = id;
     const info = fishInfo[id];
     if (!info) return;
+    
     // får fiskebilledets kilde
     const ImageSrc = el.src;
+    document.getElementById("fish-image").className = "fishImg " + id;
+
     // Vis popup
     showFishPopup(`<strong>${info.title}</strong><p>${info.text}</p>`,ImageSrc);
+
     // Stop evt. tidligere lyd
     if (currentFishSound) {
       currentFishSound.pause();
