@@ -162,7 +162,7 @@ if (closeBtn) closeBtn.addEventListener("click", hideFishPopup);
   });
 });
 
-// Add listener to "Play with me" button to pass selected fish
+// Tilføj lytter til spilleknap for at sende den valgte fisk videre
 const playButton = document.querySelector(".spilleknap");
 if (playButton) {
   playButton.addEventListener("click", (e) => {
