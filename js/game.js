@@ -114,6 +114,7 @@ function playSoundOnMovement() {
   movementSound.currentTime = 0;
 }
 
+/* global confetti */
 // Start confetti function
 function startConfetti() {
   confetti({
