@@ -44,7 +44,7 @@ I game.js:
 Spillet henter automatisk den vælgte fisk direkte fra linket i game.html og bruger den til at vise den rigtig fisk i spillet. 
 
 "TILBAGE TIL AKVARIET"
-Når spilleren vinder vises en vinderskærm med kanppen "Tilbage til akvariet"
+Når spilleren vinder vises en vinderskærm med knappen "Tilbage til akvariet"
 game.html:
 <a href="index.html" id="backButton">TILBAGE TIL AKVARIET</a>
 game.js
