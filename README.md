@@ -16,17 +16,16 @@ Opdateret layoutet under:
 /_ gør for rektangel at være en cirkel _/
 Så formen skifter fra en rektangel til en cirkel.
 
-Nye fisk: Dory
-HTML-element til en ny fisk: (index.html)
+Nye fisk: Dory i index.html
 <img src="img/dory.png" id="dory" class="fish8" alt="dory fish" />
 Dette ligger sammen med de andre fisk i <div class="bg">
-Tilføjet styling i style.css af Dory som en klasse ".fish8 {}" .  
-Tilføjet fiskedata for Dory i index.js under "const fishInfo = {}"
+Tilføjelse af styling i style.css af Dory som en klasse ".fish8 {}" .  
+Tilføjelse af fiskedata for Dory i index.js under "const fishInfo = {}"
 
 Ny AI lydfiler:
 Nye AI lydfiler for fiskerne med konvertering fra .wav til .mp3
-Lydfilerne indlæser via index.js
-// Opretter et lyd-objekt og tildeler source til den specifikke lydfil i mappen "sound"
+Lydfilerne indlæser via index.js under kommentaren:
+//Opretter et lyd-objekt og tildeler source til den specifikke lydfil i mappen "sound"
 const soundCrab = new Audio();
 soundCrab.src = "sound/krabbe-new.mp3";
 
@@ -47,7 +46,7 @@ Spillet henter automatisk den vælgte fisk direkte fra linket i game.html og bru
 Når spilleren vinder vises en vinderskærm med knappen "Tilbage til akvariet"
 game.html:
 <a href="index.html" id="backButton">TILBAGE TIL AKVARIET</a>
-game.js
+game.js:
 Knappen ligger ind i #winScreen som bliver vist når spilleren ramme "finish".
 //win screen function
 function showWinScreen() {
@@ -59,7 +58,7 @@ game.css (under kommentaren)
 /_ Styling for win screen og TILBAGE TIL AKVARIET knap _/
 
 Ny konfetti-effekt:
-game.js
+game.js:
 // Start confetti function
 function startConfetti() {}
 Den funktion tænder konfetti effekten.
