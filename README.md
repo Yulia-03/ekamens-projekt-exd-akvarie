@@ -14,9 +14,8 @@ Opdateret layoutet under:
 /_ gør for rektangel at være en cirkel _/
 Så formen skifter fra en rektangel til en cirkel.
 
-Nye fisk: Dory i index.html
-<img src="img/dory.png" id="dory" class="fish8" alt="dory fish" />
-Dette ligger sammen med de andre fisk i <div class="bg">
+Nye fisk: Dory i index.html.
+Dory img-tagget (fish8) ligger ind i div-en med klassen "bg" sammen med de andre fisk. 
 Tilføjelse af styling i style.css af Dory som en klasse ".fish8 {}" .  
 Tilføjelse af fiskedata for Dory i index.js under "const fishInfo = {}"
 
