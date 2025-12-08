@@ -4,9 +4,9 @@ Under kommentaren "tilføje fisk billederne til pop-up" ligger et tag som bruges
 
 I index.js har jeg tilføjet:
 //får fiskebilledets kilde
-const ImageSrc = el.src;
-document.getElementById("fish-image").className = "fishImg " + id;
-Den første linje henter fiskens billede og den anden opdaterer klassens styling.
+- const ImageSrc = el.src;
+- document.getElementById("fish-image").className = "fishImg " + id;
+- Den første linje henter fiskens billede og den anden opdaterer klassens styling.
 
 Tilføjelse af styling i style.css til ".fishImg {}" klasse så fiskebillederne viser korrrekt i pop-uppen.
 Opdateret layoutet under:
