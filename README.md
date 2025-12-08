@@ -8,7 +8,7 @@ const ImageSrc = el.src;
 document.getElementById("fish-image").className = "fishImg " + id;
 Den første linje henter fiskens billede og den anden opdaterer klassens styling.
 
-Tilføjet styling i style.css til ".fishImg {}" klasse så fiskebillederne viser korrrekt i pop-uppen.
+Tilføjelse af styling i style.css til ".fishImg {}" klasse så fiskebillederne viser korrrekt i pop-uppen.
 Opdateret layoutet under:
 .popupContent {}
 /_ gør for rektangel at være en cirkel _/
