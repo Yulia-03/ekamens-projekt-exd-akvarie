@@ -1,8 +1,6 @@
 Pop-up fiske billede:
 HTML-element til pop-up vinduet (index.html)
-<!-- tilføje fisk billederne til pop-up -->
-<img class="fishImg" id="fish-image" src="" alt="fish">
-Tagget bruges til at vise billedet af den fisk, som brugeren klikker på.
+Under kommentaren <!-- tilføje fisk billederne til pop-up --> ligger et tag som bruges til at vise billedet af den fisk, som brugeren klikker på.
 
 I index.js har jeg tilføjet:
 //får fiskebilledets kilde
