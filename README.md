@@ -63,4 +63,4 @@ Den funktion tænder konfetti effekten.
 Den funktion viser vinderskærmen og starter konfettien.
 - game.html:
 - Der ligger en script-link som tilføje konfetti-funktionen
-- Den link er fundet via google og henter konfetti scrriptet.
+- Denne link er fundet via google og henter konfetti scrriptet.
